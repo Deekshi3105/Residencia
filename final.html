@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residénciá</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="image/logo.png" alt="">
+            </div>
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#gallery">Our Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><i class="fa fa-search"></i></li>
+                    <li><button class="primary-btn" onclick="book()">BOOK NOW</button></li>
+                </ul>
+                <span class="fa fa-bars" onclick="menutoggle()"></span>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var menulist = document.getElementById('menulist');
+        menulist.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "100vh";
+            }
+            else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+
+        function book() {
+            window.location.href = "login.php";
+        }
+
+    </script>
+
+    <section class="home" id="home">
+        <div class="content">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="image/banner-1.jpg" alt="">
+                    <div class="text">
+                        <h1>Residénciá Luxury Hotels</h1>
+                        <p>Discover Your Perfect Getaway with Residencia: Where Comfort Meets Convenience.
+                        </p>
+                        <div class="flex">
+                            <button class="primary-btn">READ MORE</button>
+                            <button class="secondary-btn">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/banner-2.jpg" alt="">
+                    <div class="text">
+                        <h1>Spend your Holiday</h1>
+                        <p>Discover Your Perfect Getaway with Residencia: Where Comfort Meets Convenience.
+                        </p>
+                        <div class="flex">
+                            <button class="primary-btn">READ MORE</button>
+                            <button class="secondary-btn">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/banner-3.jpg" alt="">
+                    <div class="text">
+                        <h1>Spend your Holiday</h1>
+                        <p>Discover Your Perfect Getaway with Residencia: Where Comfort Meets Convenience.
+                        </p>
+                        <div class="flex">
+                            <button class="primary-btn">READ MORE</button>
+                            <button class="secondary-btn">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class="home">
+        <video autoplay muted loop id="myVideo">
+            <source src="image/home.video.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum...</p>
+        </div>
+    </section> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: false,
+            navText: ["<i class= 'fa fa-chevron-left'></i>", "<i class= 'fa fa-chevron-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+
+    <section class="book">
+        <div class="container flex_space">
+            <div class="text">
+                <h1><span>Book</span> Your Rooms</h1>
+            </div>
+            <div class="form">
+                <form id="availabilityForm" class="grid">
+                    <input id="checkInDate" placeholder="Check-in Date" type="text" onfocus="(this.type = 'date')"
+                        id="date">
+                    <input id="checkOutDate" placeholder="Check-out Date" type="text" onfocus="(this.type = 'date')"
+                        id="date">
+                    <input type="number" placeholder="Adults">
+                    <input type="number" placeholder="Children">
+                    <input type="submit" value="CHECK AVAILABILITY">
+                </form>
+                <div id="availabilityResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('availabilityForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var checkInDate = new Date(document.getElementById('checkInDate').value);
+            var checkOutDate = new Date(document.getElementById('checkOutDate').value);
+
+            // Perform availability check or further processing as needed
+            var isAvailable = checkAvailability(checkInDate, checkOutDate);
+
+            // Display availability result
+            var resultElement = document.getElementById('availabilityResult');
+            resultElement.innerHTML = isAvailable ? 'Rooms are available for the selected dates!' : 'Sorry, no rooms available for the selected dates.';
+        });
+
+        function checkAvailability(checkInDate, checkOutDate) {
+            // Mock implementation for checking availability
+            var currentDate = new Date();
+            var availableStartDate = new Date('2023-07-01');
+            var availableEndDate = new Date('2023-07-15');
+
+            // Check if the selected dates are within the available range
+            if (checkInDate >= availableStartDate && checkOutDate <= availableEndDate) {
+                // Additional checks or API calls can be performed here if required
+                return true; // Rooms are available
+            } else {
+                return false; // No rooms available
+            }
+        }
+
+    </script>
+
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="heading">
+                    <h1>WELCOME</h1>
+                    <h2>Residénciá</h2>
+                </div>
+                <p>Welcome to Residencia, your premier destination for exceptional hotel experiences! Whether you're
+                    traveling for business or leisure, we offer a wide range of carefully curated accommodations to
+                    cater to your unique preferences. With warm smiles and personalized attention, our dedicated team
+                    ensures that your stay is remarkable. From exquisite dining to rejuvenating spa treatments, our
+                    amenities and services enhance your experience. Conveniently located in the heart of [city name],
+                    Residencia provides easy access to local attractions. We are committed to exceeding your
+                    expectations and creating cherished memories.
+                </p>
+                <button class="primary-btn" onclick="redirect()">ABOUT US</button>
+
+            </div>
+            <div class="right">
+                <img src="image/about.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+    <script>
+        function redirect()
+        {
+            window.location.href="readmore.html";
+        }
+    </script>
+
+    <section class="counter top">
+        <div class="container grid">
+            <div class="box">
+                <h1>2500</h1>
+                <hr>
+                <span>Customers</span>
+            </div>
+            <div class="box">
+                <h1>1250</h1>
+                <hr>
+                <span>Happy Customers</span>
+            </div>
+            <div class="box">
+                <h1>150</h1>
+                <hr>
+                <span>Expert Technicians</span>
+            </div>
+            <div class="box">
+                <h1>3550</h1>
+                <hr>
+                <span>Desktop Reaired</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="rooms" id="rooms">
+        <div class="container top">
+            <div class="heading">
+                <h1>EXPLORE</h1>
+                <h2>Our rooms</h2>
+                <p>Welcome to our Rooms Section!</p>
+
+                <p> Discover a range of comfortable and stylish accommodations designed to meet your unique preferences
+                    at Residencia. Whether you're a solo traveler, a couple on a romantic getaway, a family seeking a
+                    fun-filled vacation, or a business traveler in need of convenience and comfort, we have the perfect
+                    room for you. </p>
+            </div>
+            <div class="content mtop"><br>
+                <div class="owl-carousel owl-carousel1 owl-theme">
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-1.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Standard Room</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A comfortable and well-appointed room suitable for individual travelers or couples.</p>
+                            <div class="button flex">
+                                <a href="standard.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$250<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-2.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Deluxe Room</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A spacious and upgraded room offering extra amenities and enhanced comfort.</p>
+                            <div class="button flex">
+                                <a href="deluxe.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$300<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-3.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Suite</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A larger, more luxurious room with separate living and sleeping areas, ideal for guests
+                                seeking extra space and privacy.</p>
+                            <div class="button flex">
+                                <a href="suite.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$350<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-4.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Family Room</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A specially designed room that can accommodate families with children, often featuring
+                                multiple beds or interconnected rooms.</p>
+                            <div class="button flex">
+                                <a href="family.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$4500<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-5.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Executive Room</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p> A premium room designed for business travelers, equipped with a work desk, ergonomic
+                                chair, and additional business-oriented amenities.</p>
+                            <div class="button flex">
+                                <a href="executive.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$500<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-6.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Premium Suite</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A top-tier suite offering lavish amenities, exclusive services, and panoramic views,
+                                designed for guests seeking a truly indulgent experience.</p>
+                            <div class="button flex">
+                                <a href="premium.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$700<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-7.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Villa</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A private, standalone accommodation with its own amenities, such as a private pool,
+                                garden, or kitchenette, providing guests with a luxurious and secluded retreat.</p>
+                            <div class="button flex">
+                                <a href="villa.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$500<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img src="image/room-8.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Extended Stay Room</h2>
+                            <div class="rate flex">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>A room with additional features like a small kitchenette or laundry facilities, ideal for
+                                guests planning an extended stay or those who prefer a self-catering option.</p>
+                            <div class="button flex">
+                                <a href="extendedstay.html"><button class="primary-btn">BOOK NOW</button></a>
+                                <h3>$400<span><br>Per Night</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 50,
+            nav: true,
+            dots: false,
+            navText: ["<i class= 'fa fa-chevron-left'></i>", "<i class= 'fa fa-chevron-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2,
+                    margin: 10,
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+
+    </script>
+
+    <section class="gallery" id="gallery">
+        <div class="container top">
+            <div class="heading">
+                <h1>PHOTOS</h1>
+                <h2>Our Gallery</h2>
+                <p>Prepare to be captivated by the enchanting visuals that await you at Residencia. Explore our
+                    carefully curated gallery of stunning images showcasing the beauty, elegance, and exceptional
+                    amenities of our hotel.</p>
+            </div>
+        </div>
+        <div class="content mtop">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-1.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-2.jpg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-3.jpg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-4.jpg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-5.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-6.jpg" alt="">
+                    </div>
+                    
+                  
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-4.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-3.jpg" alt="">
+                    </div>
+                  
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-1.jpg" alt="">
+                    </div>
+                  
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-7.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-8.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-9.jpg" alt="">
+                    </div>
+                   
+                </div>
+                <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-10.jpg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.owl-carousel1').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            navText: ["<i class= 'fa fa-chevron-right'></i>", "<i class= 'fa fa-chevron-left'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 4
+                },
+                1000: {
+                    items: 6
+                }
+            }
+        })
+
+    </script>
+
+    <section id="services" class="services top">
+        <div class="container">
+            <div class="heading">
+                <h1>SERVICES</h1>
+                <h2>Our SERVICES</h2>
+                <p>Experience Unparalleled Services at Residencia!</p><br>
+
+                <p> At Residencia, we are dedicated to providing our guests with an unforgettable stay, offering a
+                    comprehensive range of exceptional services designed to cater to your every need. From the moment
+                    you arrive until the time of your departure, our attentive and professional staff is committed to
+                    ensuring your comfort and satisfaction.</p>
+            </div>
+            <div class="content flex_space">
+                <div class="left grid2">
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <h3><a href="food.html">Delicious Food</a></h3>
+
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-person-biking"></i>
+                            <h3><a href="fitness.html">Fitness</a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-utensils"></i>
+                            <h3> <a href="restaurant.html"> Inhouse Restaurant </a></h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-spa"></i>
+                            <h3> <a href="spa.html"> Beauty Spa </a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="image/services.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="customers top">
+        <div class="container">
+            <div class="owl-carousel owl-carousel2 owl-theme">
+                <div class="item">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <h1 style="font-size: 30px;">Testimonials</h1><br>
+                    <p>My stay at Residencia was absolutely fantastic! The staff was incredibly welcoming and attentive,
+                        making me feel like a valued guest from the moment I arrived. The room was beautifully
+                        appointed, and the attention to detail was remarkable. I highly recommend Residencia to anyone
+                        seeking a luxurious and memorable stay.</p>
+                    <h3>Julia Robertson</h3>
+                    <label>Julia Robertson</label>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <h1 style="font-size: 30px;">Testimonials</h1><br>
+                    <p>I had the pleasure of staying at Residencia during my business trip, and I was thoroughly
+                        impressed. The executive room provided the perfect combination of comfort and functionality,
+                        with a spacious work area and modern amenities. The staff went above and beyond to ensure all my
+                        needs were met, making my stay productive and enjoyable. I will definitely choose Residencia for
+                        my future visits.</p>
+                    <h3>Louis Patridge</h3>
+                    <label>Louis Patridge</label>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <h1 style="font-size: 30px;">Testimonials</h1><br>
+                    <p>Residencia is my go-to choice for business travel. The hotel's convenient location, coupled with
+                        their excellent amenities and services, make it the perfect choice for a comfortable and
+                        productive stay. The reliable Wi-Fi, well-equipped business center, and attentive staff ensure
+                        that all my professional needs are met. I highly recommend Residencia to fellow business
+                        travelers</p>
+                    <h3>Cole Sprouse</h3>
+                    <label>Cole Sprouse</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $('.owl-carousel2').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1,
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+
+    <section id="news" class="news top rooms">
+        <div class="container">
+            <div class="heading">
+                <h1>NEWS</h1>
+                <h2>Our News</h2>
+                <p>We encourage you to check back regularly to stay informed and take advantage of the latest news and
+                    offerings at Residencia. You can also subscribe to our newsletter to receive updates directly in
+                    your inbox, ensuring you never miss out on any exciting opportunities.</p>
+            </div>
+
+            <div class="content flex">
+                <div class="left grid2">
+                    <div class="items">
+                        <div class="image">
+                            <img style="height: 350px; width: 350px;" src="image/blog1.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Unveiling our State-of-the-Art Gym</h2>
+                            <div class="admin flex">
+                                <i class="fa fa-user"></i>
+                                <label>Admin</label>
+                                <i class="fa fa-heart"></i>
+                                <label>890</label>
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <p>Our state-of-the-art gym is designed to provide you with a comprehensive fitness
+                                experience, enabling you to achieve your fitness goals while staying with us.</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="image">
+                            <img style="height: 350px; width: 350px;" src="image/blog2 .jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Introducing our New Spa Packages</h2>
+                            <div class="admin flex">
+                                <i class="fa fa-user"></i>
+                                <label>Admin</label>
+                                <i class="fa fa-heart"></i>
+                                <label>508</label>
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <p>Step into our serene spa sanctuary and immerse yourself in a world of tranquility,
+                                where soothing treatments and expert therapists await to pamper your body, mind, and
+                                soul.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box flex">
+                        <div class="img">
+                            <img style="height: 100px; width: 100px;" src="image/blogs1.jpg" alt="">
+                        </div>
+                        <div class="stext">
+                            <h2>Discover the Flavors of the Season</h2>
+                            <p>Special Dining Experiences at Residénciá</p>
+                        </div>
+                    </div>
+                    <div class="box flex">
+                        <div class="img">
+                            <img style="height: 100px; width: 100px;" src="image/blogs2.jpg" alt="">
+                        </div>
+                        <div class="stext">
+                            <h2>A Gastronomic Journey Awaits!</h2>
+                            <p>Indulge in Culinary Delights at Residénciá</p>
+                        </div>
+                    </div>
+                    <div class="box flex">
+                        <div class="img">
+                            <img style="height: 100px; width: 100px;" src="image/blogs3.jpg" alt="">
+                        </div>
+                        <div class="stext">
+                            <h2>Unveiling Our Renovated Lobby</h2>
+                            <p>A New Welcome Experience Awaits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter mtop">
+        <div class="container flex_space">
+            <h1>Subscribe to Our Newsletter</h1>
+            <input type="text" placeholder="Your Email">
+            <input type="text" value="Subscribe">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container grid">
+            <div class="box">
+                <img height="100px" width="100px" src="image/logo-1.png" alt="">
+                <p>Your Gateway to Unforgettable Experiences</p>
+
+                <div class="icon">
+                    <a href="https://www.facebook.com/theatheneehotel/"><i class="fa fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/theatheneehotel/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/RixosHotels"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@bonappetit"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Links</h2>
+                <ul>
+                    <li>Company History</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Services</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Contact US</h2>
+                <p>We would love to hear from you. Please reach out to us using any of the following methods:</p>
+                <i class="fa fa-location-dot"></i>
+                <label>1201 park street, Avenue, Dhanmondy, Dhaka.</label><br>
+                <i class="fa fa-phone"></i>
+                <label>[88] 567 786 999</label><br>
+                <i class="fa fa-envelope"></i>
+                <label>info@dentar.com</label><br>
+            </div>
+        </div>
+    </footer>
+
+    <div class="legal">
+        <p class="container">Copyright (c) 2022 Copyright Holder All Rights Reserved.</p>
+    </div>
+
+    <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

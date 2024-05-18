@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Residencia - Book Family Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        #hero {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        #hero h1 {
+            font-size: 36px;
+        }
+
+        #hero p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        #booking h2 {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #bookingForm {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="date"],
+        input[type="number"],
+        select {
+            background-color: #f9f9f9;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ::placeholder {
+            color: #999;
+        }
+
+        #bookingResult {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-now.html">Book Now</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="spa.html">Spa</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Book a Family Room</h1>
+        <p>Select your preferred dates to make a reservation for a family room.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Reservation Details</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkOutDate">Check-out Date:</label>
+                <input type="date" id="checkOutDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bedType">Bed Type:</label>
+                <select id="bedType" required>
+                    <option value="" disabled selected>Select Bed Type</option>
+                    <option value="king">King Bed</option>
+                    <option value="queen">Queen Bed</option>
+                    <option value="twin">Twin Beds</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="specialRequests">Special Requests:</label>
+                <textarea id="specialRequests" rows="4"
+                    placeholder="Any special requests or additional information"></textarea>
+            </div>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Residencia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var checkInDate = new Date(document.getElementById('checkInDate').value);
+            var checkOutDate = new Date(document.getElementById('checkOutDate').value);
+            var guests = parseInt(document.getElementById('guests').value);
+            var bedType = document.getElementById('bedType').value;
+            var specialRequests = document.getElementById('specialRequests').value;
+
+            // Perform booking logic or API calls as needed
+            var isBookingSuccessful = bookFamilyRoom(checkInDate, checkOutDate, guests, bedType, specialRequests);
+
+            // Display booking result
+            var resultElement = document.createElement('div');
+            resultElement.id = 'bookingResult';
+            if (isBookingSuccessful) {
+                resultElement.textContent = 'Congratulations! Your family room has been booked successfully.';
+            } else {
+                resultElement.textContent = 'Sorry, the family room is not available for the selected dates or number of guests.';
+            }
+            document.getElementById('booking').appendChild(resultElement);
+        });
+
+        function bookFamilyRoom(checkInDate, checkOutDate, guests, bedType, specialRequests) {
+            // Mock implementation for booking a family room
+            var currentDate = new Date();
+            var availableStartDate = new Date('2023-07-01');
+            var availableEndDate = new Date('2023-07-15');
+            var maxGuests = 4;
+
+            // Check if the selected dates and guests are within the available range
+            if (checkInDate >= availableStartDate && checkOutDate <= availableEndDate && guests <= maxGuests) {
+                // Additional checks or API calls can be performed here if required
+                // Check if the selected bed type is available for the given room
+                var availableBedTypes = ['king', 'queen', 'twin']; // Replace with actual available bed types
+                if (availableBedTypes.includes(bedType)) {
+                    // Perform the booking logic or API calls and return true if successful
+                    // For this example, we'll simply assume the booking is successful
+                    console.log('Booking details:');
+                    console.log('Check-in:', checkInDate);
+                    console.log('Check-out:', checkOutDate);
+                    console.log('Guests:', guests);
+                    console.log('Bed Type:', bedType);
+                    console.log('Special Requests:', specialRequests);
+                    return true; // Room is available and booking is successful
+                } else {
+                    return false; // Room is not available with the selected bed type
+                }
+            } else {
+                return false; // Room is not available or booking is not possible
+            }
+        }
+
+    </script>
+</body>
+
+</html>

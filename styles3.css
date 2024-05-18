@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #282834;
+    color: #000;
+    padding: 10px;
+  }
+  
+  nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color:#000;
+    margin: 0 10px;
+    transition: 0.5s;
+    text-decoration: none;
+    float: right;
+  }
+  nav  ul li a:hover{
+    color:#7fc142;
+ }
+  
+  section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  #hero {
+    background-color: #7fc142;
+    text-align: center;
+    color: white;
+  }
+  
+  footer{
+    
+    background: #282834;
+    color: #b6b7b9;
+    padding: 10% 0 5% 0;
+}
+footer .grid{
+    grid-template-columns: 6fr 3fr 3fr;
+}
+footer p {
+    color: #b6b7b9;
+    line-height: 25px;
+    font-size: 15px;
+}
+footer .icon i{
+    margin: 20px 20px 20px 0;
+    color: #b6b7b9;
+}
+footer h2{
+    color: white;
+    margin-bottom: 10px;
+}
+footer li{
+    margin-bottom: 20px;
+}
+footer i{
+    color: #7fc142;
+    margin: 20px 0;
+    margin-right: 20px;
+}
+footer label{
+    margin: 20px 0;
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px;
+    max-width: 75%;
+    margin: 20px auto;
+  }
+  
+  
+  #fitness-services {
+    text-align: center;
+  }
+  
+  .fitness-service {
+    margin-bottom: 30px;
+  }
+  
+  .fitness-service img {
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  #class-schedule {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  
+  
